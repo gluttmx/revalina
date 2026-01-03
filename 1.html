@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Summary - Story Scroll</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            color: #222;
+        }
+
+        .side-nav {
+            position: fixed;
+            right: 40px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 100;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .dot-link {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            border: 2px solid white;
+            transition: all 0.3s ease;
+            display: block;
+        }
+
+        .dot-link:hover {
+            transform: scale(1.3);
+            background: white;
+        }
+
+        .section {
+            min-height: 100vh;
+            padding: 100px 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .section-intro {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .section-overview {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+        }
+
+        .section-ch1 {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+        }
+
+        .section-ch2 {
+            background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+            color: #1a1a1a;
+        }
+
+        .section-ch3 {
+            background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+            color: #1a1a1a;
+        }
+
+        .section-ch4 {
+            background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);
+            color: white;
+        }
+
+        .content-wrapper {
+            max-width: 900px;
+            width: 100%;
+        }
+
+        .tag {
+            display: inline-block;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 8px 20px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            margin-bottom: 20px;
+        }
+
+        .heading {
+            font-size: 56px;
+            font-weight: 700;
+            margin-bottom: 30px;
+            line-height: 1.2;
+        }
+
+        .intro-text {
+            font-size: 22px;
+            line-height: 1.6;
+            opacity: 0.95;
+        }
+
+        .body-text {
+            font-size: 19px;
+            line-height: 1.8;
+            opacity: 0.9;
+        }
+
+        .visual {
+            margin: 45px 0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .visual img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .visual-note {
+            margin-top: 15px;
+            font-size: 15px;
+            opacity: 0.8;
+            text-align: center;
+            font-style: italic;
+        }
+
+        .visual-float-right {
+            float: right;
+            max-width: 420px;
+            margin: 0 0 30px 40px;
+        }
+
+        .visual-float-left {
+            float: left;
+            max-width: 420px;
+            margin: 0 40px 30px 0;
+        }
+
+        .visual-full {
+            margin: 50px 0;
+        }
+
+        .intro-section {
+            text-align: center;
+        }
+
+        .intro-section .heading {
+            font-size: 72px;
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .side-nav {
+                right: 15px;
+            }
+
+            .section {
+                padding: 80px 25px;
+            }
+
+            .heading {
+                font-size: 38px;
+            }
+
+            .intro-section .heading {
+                font-size: 48px;
+            }
+
+            .intro-text {
+                font-size: 18px;
+            }
+
+            .body-text {
+                font-size: 17px;
+            }
+
+            .visual-float-right,
+            .visual-float-left {
+                float: none;
+                max-width: 100%;
+                margin: 30px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="side-nav">
+        <a href="#intro" class="dot-link"></a>
+        <a href="#overview" class="dot-link"></a>
+        <a href="#ch1" class="dot-link"></a>
+        <a href="#ch2" class="dot-link"></a>
+        <a href="#ch3" class="dot-link"></a>
+        <a href="#ch4" class="dot-link"></a>
+    </nav>
+
+    <section id="intro" class="section section-intro intro-section">
+        <div class="content-wrapper">
+            <h1 class="heading">Digital Consciousness</h1>
+            <p class="intro-text">A modern exploration of technology and human evolution</p>
+        </div>
+    </section>
+
+    <section id="overview" class="section section-overview">
+        <div class="content-wrapper">
+            <span class="tag">Overview</span>
+            <h2 class="heading">A Journey Through Innovation</h2>
+            <div class="body-text">
+                This groundbreaking work explores the intersection of technology and human consciousness in the 21st century. Through four compelling chapters, the author weaves together stories of innovation, struggle, and ultimate transformation.
+
+                <div class="visual visual-full">
+                    <img src="https://via.placeholder.com/900x450/f5576c/ffffff?text=Innovation+Journey" alt="Book overview">
+                    <p class="visual-note">The convergence of human and digital consciousness</p>
+                </div>
+
+                The narrative challenges readers to reconsider their relationship with digital systems and contemplate the future of human-machine collaboration.
+            </div>
+        </div>
+    </section>
+
+    <section id="ch1" class="section section-ch1">
+        <div class="content-wrapper">
+            <span class="tag">Chapter One</span>
+            <h2 class="heading">The Awakening</h2>
+            <div class="body-text">
+                In the first chapter, we meet Dr. Sarah Chen, a neuroscientist who discovers an unexpected pattern in brain-computer interface data.
+
+                <div class="visual visual-float-right">
+                    <img src="https://via.placeholder.com/420x300/00f2fe/ffffff?text=Laboratory" alt="Laboratory">
+                    <p class="visual-note">Dr. Chen's research laboratory</p>
+                </div>
+
+                Her research lab becomes the epicenter of a technological breakthrough that will change everything. The chapter explores themes of scientific discovery, ethical responsibility, and the moment when theory becomes reality. Through vivid descriptions and compelling dialogue, readers witness the birth of a new era.
+            </div>
+        </div>
+    </section>
+
+    <section id="ch2" class="section section-ch2">
+        <div class="content-wrapper">
+            <span class="tag">Chapter Two</span>
+            <h2 class="heading">Digital Consciousness</h2>
+            <div class="body-text">
+                The narrative shifts to explore the implications of Chen's discovery. We follow multiple characters as they grapple with a world where the boundary between biological and digital consciousness begins to blur.
+
+                <div class="visual visual-float-left">
+                    <img src="https://via.placeholder.com/420x300/38f9d7/ffffff?text=Neural+Interface" alt="Neural interface">
+                    <p class="visual-note">The neural interface visualization</p>
+                </div>
+
+                Corporate interests, government agencies, and grassroots movements all converge around this transformative technology. The author masterfully balances technical accuracy with emotional depth, creating a story that is both intellectually rigorous and deeply human.
+            </div>
+        </div>
+    </section>
+
+    <section id="ch3" class="section section-ch3">
+        <div class="content-wrapper">
+            <span class="tag">Chapter Three</span>
+            <h2 class="heading">The Resistance</h2>
+            <div class="body-text">
+                Not everyone welcomes the new technology. This chapter introduces us to the resistance movement, led by philosopher Marcus Webb, who argues that humanity is sacrificing its essence for convenience.
+
+                <div class="visual visual-full">
+                    <img src="https://via.placeholder.com/900x450/fee140/ffffff?text=Resistance+Movement" alt="Resistance">
+                    <p class="visual-note">The resistance movement spreads globally</p>
+                </div>
+
+                Through philosophical debates, covert operations, and personal sacrifices, we see the full spectrum of human response to radical change. The tension builds as opposing forces move toward an inevitable confrontation.
+            </div>
+        </div>
+    </section>
+
+    <section id="ch4" class="section section-ch4">
+        <div class="content-wrapper">
+            <span class="tag">Chapter Four</span>
+            <h2 class="heading">Convergence</h2>
+            <div class="body-text">
+                The final chapter brings all threads together in an unexpected resolution. Rather than a simple victory for one side, the author presents a nuanced synthesis where both technological progress and human authenticity find their place.
+
+                <div class="visual visual-float-right">
+                    <img src="https://via.placeholder.com/420x300/30cfd0/ffffff?text=Unity" alt="Unity">
+                    <p class="visual-note">The synthesis of two worlds</p>
+                </div>
+
+                Dr. Chen and Marcus Webb must work together to prevent a catastrophic system failure, discovering that the true path forward requires integration rather than opposition. The ending leaves readers with profound questions about identity, progress, and what it means to be human.
+            </div>
+        </div>
+    </section>
+</body>
+</html>
